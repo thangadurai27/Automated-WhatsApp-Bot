@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp News Bot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen">
+        <!-- Header -->
+        <header class="bg-white shadow">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex">
+                        <div class="flex-shrink-0 flex items-center">
+                            <h1 class="text-xl font-bold text-indigo-600">WhatsApp News Bot</h1>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium">Login</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+                <!-- Hero Section -->
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="px-4 py-5 sm:p-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="flex flex-col justify-center">
+                                <h2 class="text-3xl font-extrabold text-gray-900">Get News Updates on WhatsApp</h2>
+                                <p class="mt-4 text-lg text-gray-500">
+                                    Stay informed with personalized news updates delivered directly to your WhatsApp. Choose your topics, set your schedule, and never miss important news again.
+                                </p>
+                                <div class="mt-8">
+                                    <button class="bg-indigo-600 text-white px-6 py-3 rounded-md text-lg font-medium">Get Started</button>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center">
+                                <div class="bg-gray-200 p-4 rounded-lg w-64 h-96">
+                                    <div class="bg-green-500 text-white p-2 rounded-t-lg">
+                                        <h3 class="text-center">WhatsApp</h3>
+                                    </div>
+                                    <div class="bg-gray-100 p-3 h-80 overflow-y-auto">
+                                        <div class="bg-white p-2 rounded-lg mb-2 shadow">
+                                            <p class="font-bold">WhatsApp News Bot</p>
+                                            <p>🗞️ <strong>Breaking News: Global Markets Rally</strong></p>
+                                            <p>📌 Summary: Markets across Asia, Europe, and the US saw significant gains as inflation concerns eased.</p>
+                                            <p>📍 Financial Times | 🕒 2 hours ago</p>
+                                        </div>
+                                        <div class="bg-white p-2 rounded-lg mb-2 shadow">
+                                            <p class="font-bold">WhatsApp News Bot</p>
+                                            <p>🗞️ <strong>Tech Giants Announce New AI Partnership</strong></p>
+                                            <p>📌 Summary: Major tech companies form alliance to develop ethical AI standards and shared research.</p>
+                                            <p>📍 Tech Today | 🕒 4 hours ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features Section -->
+                <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Feature 1 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg">
+                        <div class="px-4 py-5 sm:p-6">
+                            <h3 class="text-lg font-medium text-gray-900">Personalized Topics</h3>
+                            <p class="mt-2 text-sm text-gray-500">
+                                Choose from a wide range of topics and customize your news feed to match your interests.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg">
+                        <div class="px-4 py-5 sm:p-6">
+                            <h3 class="text-lg font-medium text-gray-900">AI Summaries</h3>
+                            <p class="mt-2 text-sm text-gray-500">
+                                Get concise AI-generated summaries of news articles, saving you time while keeping you informed.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg">
+                        <div class="px-4 py-5 sm:p-6">
+                            <h3 class="text-lg font-medium text-gray-900">Flexible Scheduling</h3>
+                            <p class="mt-2 text-sm text-gray-500">
+                                Set your preferred update frequency - hourly or daily updates to match your routine.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing Section -->
+                <div class="mt-8">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Pricing Plans</h2>
+                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                        <!-- Free Tier -->
+                        <div class="bg-white overflow-hidden shadow rounded-lg">
+                            <div class="px-4 py-5 sm:p-6">
+                                <h3 class="text-xl font-bold text-gray-900">Free Tier</h3>
+                                <p class="mt-4 text-4xl font-extrabold text-gray-900">$0<span class="text-xl font-medium text-gray-500">/month</span></p>
+                                <ul class="mt-6 space-y-4">
+                                    <li class="flex items-start">
+                                        <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="ml-3 text-gray-700">Up to 3 topics</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="ml-3 text-gray-700">Daily updates only</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="ml-3 text-gray-700">Maximum 3 updates per day</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="ml-3 text-gray-700">1 WhatsApp number</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-8">
+                                    <button class="w-full bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium">Sign Up Free</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Premium Tier -->
+                        <div class="bg-indigo-50 overflow-hidden shadow rounded-lg border-2 border-indigo-500">
+                            <div class="px-4 py-5 sm:p-6">
+                                <h3 class="text-xl font-bold text-gray-900">Premium Tier</h3>
+                                <p class="mt-4 text-4xl font-extrabold text-gray-900">$9.99<span class="text-xl font-medium text-gray-500">/month</span></p>
+                                <ul class="mt-6 space-y-4">
+                                    <li class="flex items-start">
+                                        <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="ml-3 text-gray-700">Unlimited topics</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="ml-3 text-gray-700">Hourly or daily updates</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="ml-3 text-gray-700">Unlimited updates</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="ml-3 text-gray-700">Multiple WhatsApp numbers</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="ml-3 text-gray-700">Advanced AI summaries</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="ml-3 text-gray-700">Priority support</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-8">
+                                    <button class="w-full bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium">Subscribe Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white mt-12">
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <p class="text-center text-gray-500">© 2025 WhatsApp News Bot. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

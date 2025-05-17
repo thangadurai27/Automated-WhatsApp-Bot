@@ -1,0 +1,77 @@
+version: '3.8'
+
+services:
+  # Backend API
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@db:5432/whatsapp_news
+      - NEWSDATA_API_KEY=${NEWSDATA_API_KEY}
+      - TWILIO_SID=${TWILIO_SID}
+      - TWILIO_AUTH_TOKEN=${TWILIO_AUTH_TOKEN}
+      - TWILIO_FROM_NUMBER=${TWILIO_FROM_NUMBER}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    depends_on:
+      - db
+      - redis
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+  # Frontend
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+
+  # Celery worker
+  celery_worker:
+    build: ./backend
+    command: celery -A celery_worker worker --loglevel=info
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@db:5432/whatsapp_news
+      - NEWSDATA_API_KEY=${NEWSDATA_API_KEY}
+      - TWILIO_SID=${TWILIO_SID}
+      - TWILIO_AUTH_TOKEN=${TWILIO_AUTH_TOKEN}
+      - TWILIO_FROM_NUMBER=${TWILIO_FROM_NUMBER}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    depends_on:
+      - db
+      - redis
+      - backend
+
+  # Celery beat for scheduled tasks
+  celery_beat:
+    build: ./backend
+    command: celery -A celery_worker beat --loglevel=info
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@db:5432/whatsapp_news
+    depends_on:
+      - db
+      - redis
+      - backend
+
+  # PostgreSQL database
+  db:
+    image: postgres:13
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=whatsapp_news
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # Redis for Celery
+  redis:
+    image: redis:6
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_data:
