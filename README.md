@@ -63,7 +63,7 @@ docker-compose up -d
 - 1 WhatsApp number
 - Basic AI summaries
 
-### Premium Tier ($9.99/month)
+### Premium Tier (Rs:1/month)
 - Unlimited topics
 - Hourly or daily updates
 - Unlimited updates
